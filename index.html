@@ -1,19 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head><metacharset="utf-8">
+    <title>12월 2일 실습 202400634 이예린</title>
+    <h2>마라탕 재료 추가 페이지</h2>
 <body>
- <input type="checkbox" name="myAdd" value="1500">추가채소 1500 원<br>
- <input type="checkbox" name="myAdd" value="1000">추가음료 1000 원<br>
- <input type="checkbox" name="myAdd" value="500">추가피클 500 원<br>
- <input type="button" value="add" onClick="getCheckbox()"><hr>
- <p id="result"></p>
- <script>
- function getCheckbox() {
- let sum = 0;
- const adds = document.getElementsByName("myAdd");
- for (let i = 0; i < adds.length; i++) {
- if (adds[i].checked)
- sum = sum + parseInt(adds[i].value); 
- }
- document.getElementById("result").innerHTML = `추가금액: ${sum}원`;
- }
- </script>
-</body>
-
+    <input type="checkbox" name="myAdd" value="1500">숙주 100g 500원<br>
+    <input type="checkbox" name="myAdd" value="1000">청경채 100g700원<br>
+    <input type="checkbox" name="myAdd" value="500">유부 1개 500원<br>
+    <input type="checkbox" name="myAdd" value="500">목이버섯 100g 500원<br>
+    <input type="button" value="add" onClick="getCheckbox()"><hr>
+    <p id="result"></p>
+    <script>
+    function getCheckbox() {
+    let sum = 0;
+    const adds = document.getElementsByName("myAdd");
+    for (let i = 0; i < adds.length; i++) {
+    if (adds[i].checked)
+    sum = sum + parseInt(adds[i].value); 
+    }
+    document.getElementById("result").innerHTML = `추가금액: ${sum}원`;
+    }
+    </script>
+   </body>
+   </html>
