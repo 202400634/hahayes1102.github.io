@@ -1,17 +1,19 @@
 <body>
-    <p>키우고 싶은 동물은</p>
-    <select id="myOption">
-    <option value="dog">개</option>
-    <option value="cat">고양이</option>
-    <option value="duck">오리</option>
-    <option value="koala">코알라</option>
-    </select><br>
-    <input type="button" value="클릭" onClick="getSelect()"><hr>
-    <h2 id="result"></h2>
-    <script>
-    function getSelect() {
-    const index = document.getElementById("myOption").selectedIndex;
-    const st = document.getElementById("myOption").options[index].value;
-    document.getElementById("result").innerHTML = st;
-    }
-    </script>
+ <input type="checkbox" name="myAdd" value="1500">추가채소 1500 원<br>
+ <input type="checkbox" name="myAdd" value="1000">추가음료 1000 원<br>
+ <input type="checkbox" name="myAdd" value="500">추가피클 500 원<br>
+ <input type="button" value="add" onClick="getCheckbox()"><hr>
+ <p id="result"></p>
+ <script>
+ function getCheckbox() {
+ let sum = 0;
+ const adds = document.getElementsByName("myAdd");
+ for (let i = 0; i < adds.length; i++) {
+ if (adds[i].checked)
+ sum = sum + parseInt(adds[i].value); 
+ }
+ document.getElementById("result").innerHTML = `추가금액: ${sum}원`;
+ }
+ </script>
+</body>
+
